@@ -412,42 +412,13 @@
                 transform: translateY(-10px) translateX(-50%);
             }
         }
+		.first-indent {
+        text-indent: 2em; /* 首行缩进2个字符宽度 */
+    }
     </style>
 </head>
 
 <body class="bg-light min-h-screen overflow-x-hidden">
-    <!-- 导航栏 -->
-    <nav id="main-nav" class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#page1" class="text-primary font-bold text-xl">权力不对等性侵案件</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#page1" class="nav-link active">首页</a>
-                <a href="#page2" class="nav-link">导语</a>
-                <a href="#page3" class="nav-link">词云风暴</a>
-                <a href="#page4" class="nav-link">数据认知</a>
-                <a href="#page5" class="nav-link">案例分布</a>
-                <a href="#page6" class="nav-link">隐案显影</a>
-                <a href="#page7" class="nav-link">结语</a>
-                <a href="#page8" class="nav-link">污名净化</a>
-            </div>
-            <button id="mobile-menu-btn" class="md:hidden text-primary text-2xl">
-                <i class="fa fa-bars"></i>
-            </button>
-        </div>
-        <!-- 移动端菜单 -->
-        <div id="mobile-menu" class="md:hidden bg-white w-full absolute top-full left-0 shadow-lg transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none">
-            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-                <a href="#page1" class="nav-link py-2">首页</a>
-                <a href="#page2" class="nav-link py-2">导语</a>
-                <a href="#page3" class="nav-link py-2">词云风暴</a>
-                <a href="#page4" class="nav-link py-2">数据认知</a>
-                <a href="#page5" class="nav-link py-2">案例分布</a>
-                <a href="#page6" class="nav-link py-2">隐案显影</a>
-                <a href="#page7" class="nav-link py-2">结语</a>
-                <a href="#page8" class="nav-link py-2">污名净化</a>
-            </div>
-        </div>
-    </nav>
 
     <!-- 第1页：受害者的情感 -->
     <section id="page1" class="section flex items-center justify-center bg-light relative overflow-hidden">
@@ -495,20 +466,23 @@
         <div class="content-container">
             <h2 class="section-title">导语</h2>
             <div id="intro-text">
-                <p class="intro-paragraph mb-6">
+                <p class="intro-paragraph mb-6 first-indent">
                     世界卫生组织提供的数据表示，全球约有三分之一的女性曾经遭受过性暴力的残酷侵袭。在如此严峻的情况下，性侵案件层出不穷的原因引人深思。大多数人认为，性侵仅仅是“管不住下半身”的简单问题。但事实上，性侵的核心绝非性的表达，而是源于施暴者对控制和支配权力的渴望。根据维基百科调查显示，有51%的性骚扰和性侵犯是由具有监管性角色（supervisor）（老师、家长、上级等）性质的人所实施的，而监管性角色本质上都被赋予了某种权力。也就是说，性侵（sexual assault）会频繁发生在权力不对等（asymmetrical power）的关系中。而「权势性侵」就是指那些发生在权力不对等的关系中的“性”，其中包括言语层面的性挑逗、强迫进行肢体接触、强迫与对方发生性关系等。
                 </p>
-                <p class="intro-paragraph mb-6">
-                    在《房思琪的初恋乐园》中，补习教师李国华对13岁房思琪的侵害，正是此类犯罪的典型：他以文学情话为糖衣，以升学权威为枷锁，迫使受害者将性侵扭曲为“爱情”以自我麻痹。法律学者罗翔指出，此类案件中，“同意”实为假象：当施暴者处于教师、监护人或职场上位者等信任地位时，弱势方（尤其是未成年人）的“同意”因权力压迫而失效。这种剥削不依赖身体暴力，而是通过心理操控实现“合规的犯罪”。
+                <p class="intro-paragraph mb-6 first-indent">
+                    在广西百色的校园里，教师本应是守护成长的力量，却有人将权力异化为伤害的利器。班主任唐毓文利用职务便利，以“补课”为由单独留下15岁学生符月华，在2017-2019年间多次对其实施性侵并威胁。这场持续的伤害让符月华陷入抑郁、自残，高考弃考、大学退学，最终在2025年1月选择结束生命。直到遗物中的日记和记录曝光，案件才浮出水面——2月唐毓文被停职、开除并采取强制措施，6月其对强奸罪与猥亵罪供认不讳。
                 </p>
-                <p class="intro-paragraph mb-6">
-                    然而，法律对此长期失语。我国刑法将性同意年龄定为14周岁，但对14岁以上未成年人，若施暴者以“师生恋”“自愿关系”辩解，司法往往难以定性。现实中，房思琪们被迫陷入双重困境：法律无法惩罚披着“同意”外衣的剥削，而社会舆论则将罪责推向受害者——正如书中房思琪试探母亲时，得到的回应是“这么小的年纪就这么骚”。
+                <p class="intro-paragraph mb-6 first-indent">
+                    这起案件撕开了校园权力失衡的残酷真相：教师的权威成了施暴的盾牌，让受害者在沉默中走向绝境。而这样的悲剧并非孤例：天津丽丽案中，权力压迫让受害者在漫长维权中反复挣扎；汤兰兰案里，亲属利用身份优势实施的侵害，更显权力不对等的隐秘与残酷……这些案件共同撕开了一个真相——当权力被异化为施暴工具，无论是校园、家庭还是社会场域，都可能成为伤害的温床。
                 </p>
-                <p class="intro-paragraph mb-6">
-                    权势性侵的阴影早已超出个案。在女童保护”2023年性侵儿童案例统计分析报告里141起熟人作案的案例中，教师、教职工（含教练、家教、补习老师等）作案58起，占比41.13%；亲人亲属（父亲、继父、继祖父、叔伯等）作案18起，占比12.77%；这些数字印证了林奕含的控诉：“人类历史上最大规模的屠杀，是房思琪式的强暴”。
-                </p>
-                <p class="intro-paragraph mb-6">
-                    本作品试图撕开这层权力黑幕——词云中喷涌的愤怒与司法图表中模糊的重刑率，共同指向一个系统性问题：当施暴者的身份（职业/地位）能扭曲司法天平时，正义如何实现？房思琪的血泪警示我们：唯有将权力关进制度的牢笼，才能让乐园不再沦为失乐园。
+                <p class="intro-paragraph mb-6 first-indent">
+                    权势性侵的阴影早已超出个案。女童保护基金《2023年性侵儿童案例统计分析报告》里141起熟人作案的案例中，教师、教职工（含教练、家教、补习老师等）作案58起，占比41.13%；亲人亲属（父亲、继父、继祖父、叔伯等）作案18起，占比12.77%。
+				</p>
+				<p class="intro-paragraph mb-6 first-indent">
+					中华人民共和国最高人民法院在2023年发布的《两高关于办理强奸、猥亵未成年人刑事案件适用法律若干问题的解释》虽明确了特殊职责人员犯罪的从重处罚标准，但现实中证据搜集、权力边界界定的难题，仍让法律与现实间存在亟待丈量的距离。
+				</p>
+                <p class="intro-paragraph mb-6 first-indent">
+                    本作品试图撕开这层权力黑幕——词云中喷涌的愤怒与司法图表中模糊的重刑率，共同指向一个系统性问题：当施暴者的身份（职业/地位）能扭曲司法天平时，正义如何实现？不断更新的数据警示我们：唯有将权力关进制度的牢笼，才能让每一份依赖不被异化为伤害的温床。
                 </p>
             </div>
         </div>
@@ -517,27 +491,182 @@
         </div>
     </section>
 
+<!-- 新增的漫画展示部分 -->
+<section id="comic-section" class="section bg-white py-12">
+    <div class="content-container">
+        <h2 class="section-title text-center mb-8">权力不对等下的性侵案件情景再现</h2>
+        
+        <!-- 三组漫画容器，每组包含标题和图片区域 -->
+        <div class="comic-group mb-12">
+            <h3 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-6">被至亲阴影笼罩的TA<span class="text-lg opacity-80 ml-2">（2008年黑龙江省汤兰兰案）</span></h3>
+            <div id="group-1" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+        </div>
+        
+        <div class="comic-group mb-12">
+            <h3 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-6">青春被刻下隐秘伤痕的TA<span class="text-lg opacity-80 ml-2">（2025年广西百色市教师被举报性侵学生事件）</span></h3>
+            <div id="group-2" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+        </div>
+        
+        <div class="comic-group">
+            <h3 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-6">职场里被权力围猎的TA<span class="text-lg opacity-80 ml-2">（2023年天津女子出差被老板性侵事件）</span></h3>
+            <div id="group-3" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+        </div>
+        
+        <!-- 提示文字 -->
+        <p id="comic-prompt" class="text-center mt-8 text-gray-600">
+            点击图片区域查看下一张漫画（共18张）
+        </p>
+    </div>
+</section>
+
+<script>
+// 漫画图片数据 - 按组划分
+const comicGroups = [
+    [
+        "comics/comic-1.png", "comics/comic-2.png", "comics/comic-3.png",
+        "comics/comic-4.png", "comics/comic-5.png", "comics/comic-6.png"
+    ],
+    [
+        "comics/comic-7.png", "comics/comic-8.png", "comics/comic-9.png",
+        "comics/comic-10.png", "comics/comic-11.png", "comics/comic-12.png"
+    ],
+    [
+        "comics/comic-13.png", "comics/comic-14.png", "comics/comic-15.png",
+        "comics/comic-16.png", "comics/comic-17.png", "comics/comic-18.png"
+    ]
+];
+
+// 当前显示的图片索引（组索引和组内索引）
+let currentGroup = 0;
+let currentIndexInGroup = 0;
+
+// 漫画组容器
+const groupContainers = [
+    document.getElementById('group-1'),
+    document.getElementById('group-2'),
+    document.getElementById('group-3')
+];
+
+// 提示文字
+const comicPrompt = document.getElementById('comic-prompt');
+
+// 初始化显示第一张图片
+function initComics() {
+    if (currentGroup < comicGroups.length && currentIndexInGroup < comicGroups[currentGroup].length) {
+        addComicImage(
+            comicGroups[currentGroup][currentIndexInGroup],
+            groupContainers[currentGroup]
+        );
+    }
+}
+
+// 添加漫画图片
+function addComicImage(src, container) {
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'comic-item overflow-hidden rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02]';
+    
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = `漫画 ${currentGroup * 6 + currentIndexInGroup + 1}`;
+    img.className = 'w-full h-auto object-cover opacity-0 transition-opacity duration-500';
+    imgContainer.appendChild(img);
+    
+    container.appendChild(imgContainer);
+    
+    // 图片加载完成后淡入显示
+    img.onload = function() {
+        img.style.opacity = '1';
+    };
+    
+    // 如果图片加载失败，显示错误提示
+    img.onerror = function() {
+        img.alt = `漫画 ${currentGroup * 6 + currentIndexInGroup + 1} 加载失败`;
+        img.style.backgroundColor = '#f1f1f1';
+        img.style.display = 'flex';
+        img.style.justifyContent = 'center';
+        img.style.alignItems = 'center';
+        img.style.height = '300px';
+        img.style.opacity = '1';
+    };
+}
+
+// 显示下一张图片的函数
+function showNextComic() {
+    // 先尝试在当前组显示下一张
+    currentIndexInGroup++;
+    if (currentIndexInGroup < comicGroups[currentGroup].length) {
+        addComicImage(
+            comicGroups[currentGroup][currentIndexInGroup],
+            groupContainers[currentGroup]
+        );
+    } else {
+        // 当前组显示完，切换到下一组
+        currentGroup++;
+        currentIndexInGroup = 0;
+        if (currentGroup < comicGroups.length) {
+            addComicImage(
+                comicGroups[currentGroup][currentIndexInGroup],
+                groupContainers[currentGroup]
+            );
+        }
+    }
+    
+    // 更新提示文字
+    const totalDisplayed = currentGroup * 6 + currentIndexInGroup + 1;
+    const remaining = 18 - totalDisplayed;
+    
+    if (remaining > 0) {
+        comicPrompt.textContent = `点击图片区域查看下一张漫画（还剩 ${remaining} 张）`;
+    } else {
+        comicPrompt.textContent = `已显示全部18张漫画，继续向下滚动查看更多内容`;
+    }
+}
+
+// 为所有漫画组容器添加点击事件
+groupContainers.forEach(container => {
+    container.addEventListener('click', showNextComic);
+});
+
+// 页面加载时初始化
+window.addEventListener('load', function() {
+    // 确保漫画区域在视口中时才初始化
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                initComics();
+                observer.disconnect();
+            }
+        });
+    });
+    
+    observer.observe(document.getElementById('comic-section'));
+});
+</script>
+
+
     <!-- 第3页：一、词云风暴：沉默者的集体呐喊 -->
     <section id="page3" class="section bg-light">
         <div class="content-container">
             <h2 class="section-title">一、词云风暴：公众的集体呐喊</h2>
             <div class="flex flex-col md:flex-row gap-8">
+                <!-- 文字部分在左 -->
+                <div class="md:w-1/2">
+                    <p class="mb-6 first-indent">
+                        当“败类”、“禽兽不如”、“血馒头”等词汇喷薄而出时，这已不仅是对一桩悲剧的哀悼，而是对结构性暴力的血泪控诉：
+					</p>
+					<p class="mb-6 first-indent">
+					</p>
+					<p class="mb-6 first-indent">
+						呐喊出 “希望严惩“、”死刑“、”支持“，表达了公众对正义最原始的嘶吼。受害者的地狱图景，高频词“创伤”、“恶心”，赤裸裸地勾勒出性侵幸存者的创伤炼狱。与之交织的“反抗”、“希望”，则揭示了她们从深渊向上攀爬时，每一寸肌肤都沾满血泪的挣扎。
+					</p>
+					<p class="mb-6 first-indent">
+						图中多次出现“恶人”、“罪犯”、“畜生”、“人渣”、“垃圾”——这些极致贬斥的标签，是社会对施暴者的控诉。“保护”、 “赔偿”、“公道”、“正义”的反复叩问，是对制度回响的绝望呼唤。
+                    </p>
+                </div>
+                <!-- 图片部分在右 -->
                 <div class="md:w-1/2 relative h-[500px]">
                     <div id="emoji-layer" class="absolute inset-0 pointer-events-none overflow-visible z-10"></div>
-					<img src="wordcloud.png" alt="词云图">
-                </div>
-                <div class="md:w-1/2">
-                    <p class="mb-6">
-                        在网友对2·10百色教师唐毓文被举报事件、汤兰兰案、9·23女子出差被老板性侵事件的评论中，当“房思琪”的名字与“强奸犯”、“禽兽不如”、“血馒头”等词汇一同喷薄而出时，这已不仅是对一桩悲剧的哀悼，而是对结构性暴力的血泪控诉：
-					</p>
-					<p class="mb-6">
-					</p>
-					<p class="mb-6">
-						映入眼帘的是 “严惩“、”死刑“、”支持“，表达了公众对正义最原始的嘶吼。受害者的地狱图景，高频词“女孩”、“创伤”、“恶心”，赤裸裸地勾勒出性侵幸存者的创伤炼狱。
-					</p>
-					<p class="mb-6">
-						与之交织的“反抗”、“希望”，则揭示了她们从深渊向上攀爬时，每一寸肌肤都沾满血泪的挣扎。图中多次出现“恶人”、“罪犯”、“畜生”、“败类”、“垃圾”——这些极致贬斥的标签，是社会对施暴者的控诉。“保护”、 “赔偿”、“公道”、“正义”的反复叩问，是对制度回响的绝望呼唤。
-                    </p>
+					<img src="wordcloud-1.png" alt="词云图">
                 </div>
             </div>
         </div>
@@ -567,22 +696,24 @@
                     <div id="footnote" class="mt-6 text-sm text-gray-600 text-center"></div>
                 </div>
                 <div class="flex flex-col md:flex-row gap-8">
+                    <!-- 文字部分在左 -->
                     <div class="md:w-1/2">
-                        <img src="2014-2024年三类权势性侵案件的数量比例关系以及恶劣程度.png" alt="三类权势性侵案件数据图" class="w-full h-auto rounded-lg shadow-md">
-                    </div>
-                    <div class="md:w-1/2">
-                        <p class="mb-6">
+                        <p class="mb-6 first-indent">
                             常见的权势性侵案件可以大致分为三类亲属、师生、职场，施暴者通常为亲属（父亲、继父等）、教师（含教练、家教、补习老师等）、上司。我们将刑事案件中的刑罚定义为两类，拘役和五年以下有期徒刑为轻刑罚，五年以上有期徒刑和无期徒刑为重刑罚，以量刑判断案件恶劣程度。
                         </p>
-                        <p class="mb-6">
+                        <p class="mb-6 first-indent">
                             从图中柱状可以直观看到，师生一类性侵案件在近十年（2014-2024年）发生最多，共有70件，约占三类案件整体的54%。师生关系性侵的高发性，是权力结构、社会心理与制度漏洞的共同结果。教师掌控多重核心资源，师生间形成权力不对等环境。社会对教师的职业道德神化，导致公众舆论容易偏向对受害者的加害。其次，教育行为与教育环境为性侵创造隐蔽性。图表数据显示，在师生关系的刑事性侵案件中，大多数为轻刑罚。教育制度存在包庇性，校方处置以“息事宁人”为主导，教师性侵学生案件实际量刑较轻。在图中可以看到，亲属类性侵案件刑罚在三类之中最严重，达到了24件。
                         </p>
-                        <p class="mb-6">
+                        <p class="mb-6 first-indent">
                             从法律角度，家属性侵更容易满足重刑条件。比如监护人身份直接触发刑法第236条“情节恶劣”，12岁以下未成年被害人则自动适用“强奸幼女”加重条款。另外，家属性侵因长期共居性侵多次发生的可能性更大，往往能提取到更多生物证据，容易形成证据链。
                         </p>
-                        <p>
+                        <p class="mb-6 first-indent">
                             三类权势性侵本质是权力不对等关系下的暴力与掠夺。因此，国家需要完善法律法规，如在刑法中将教师等具有一定监护属性的职责身份列为法定加重情节，同时修改性同意年龄加强对未成年受害者的保护。还可以建立全国教育从业者犯罪数据库，施行性犯罪者终身禁入教育行业。
                         </p>
+                    </div>
+                    <!-- 图片部分在右 -->
+                    <div class="md:w-1/2">
+                        <img src="2014-2024年三类权势性侵案件的数量比例关系以及恶劣程度.png" alt="三类权势性侵案件数据图" class="w-full h-auto rounded-lg shadow-md">
                     </div>
                 </div>
             </div>
@@ -597,27 +728,29 @@
         <div class="content-container">
             <h2 class="section-title">三、数据表里的温差 —— 案例分布藏玄机</h2>
             <div class="flex flex-col md:flex-row gap-8">
+                <!-- 文字部分在左 -->
                 <div class="md:w-1/2">
-                    <img src="2014-2024各省份经济与案例数量关联性.gif" alt="2014-2024各省份经济与案例数量关联性" class="w-full h-auto rounded-lg shadow-md">
-                </div>
-                <div class="md:w-1/2">
-                    <p class="mb-6">
+                    <p class="mb-6 first-indent">
                         近十年的各省份经济与性侵案例数量的关联性，并非简单的线性相关。
 		    </p>
-		    <p class="mb-6">
+		    <p class="mb-6 first-indent">
 			    在十年间案例数量最多的2021年，北京的生产总值不及广东，但案例数却更多，这体现了人口规模、地域文化等因素的叠加影响；西藏等经济薄弱的地区案例数量少，并非就是风险低，更可能是治理与统计未能充分覆盖。比如广东经济领先却有 71 起案例，北京以 41046 亿元的经济规模承载了 112 起案例，这些数字背后或许藏着 “未被听见的沉默”。
                     </p>
 			<p>
 			</p>
-                    <p class="mb-6">
+                    <p class="mb-6 first-indent">
                         地域差的密码 —— 案例多少为何不一样？
                     </p>
-                    <p class="mb-6">
+                    <p class="mb-6 first-indent">
                         经济发达地区人口流动频繁，职场、地铁、城中村等场景潜藏风险；同时居民维权意识强，案件统计更全面，并非 “更危险”，而是 “更敢曝光”。而经济薄弱地区像西藏、青海，地广人稀，司法覆盖不足（60% 的县级公安机关未配备电子取证设备，2023 年西藏每万人警察数量为 9.5 人，仅为广东 18.2 人的一半）、技术落后（DNA 实验室覆盖率 70%，低于广东、浙江的 100%），再加上观念陈旧，导致案件被 “隐藏”，不是真的少，而是 “没被看见”。
                     </p>
-                    <p>
+                    <p class="mb-6 first-indent">
                         此外，经济强省跨部门协作高效（比如浙江的 “性侵案件快速办理通道”，平均办理周期 45 天），而薄弱地区流程滞后（西藏同类案件周期达 90 天），这进一步加剧了统计差异。因此，我国应统筹分配司法资源，让那些因司法光照不足的 “隐秘角落” 亮起来；提升民众的维权意识，让 “沉默的声音” 喊出来；拓宽维权渠道，稳稳接住人民的声音。
                     </p>
+                </div>
+                <!-- 图片部分在右 -->
+                <div class="md:w-1/2">
+                    <img src="2014-2024各省份经济与案例数量关联性.gif" alt="2014-2024各省份经济与案例数量关联性" class="w-full h-auto rounded-lg shadow-md">
                 </div>
             </div>
         </div>
@@ -631,26 +764,28 @@
         <div class="content-container">
             <h2 class="section-title">四、隐案的显影剂 —— “看不到” 不等于 “不存在”</h2>
             <div class="flex flex-col md:flex-row gap-8">
+                <!-- 文字部分在左 -->
                 <div class="md:w-1/2">
-                    <img src="2014-2024 年性侵类案件文书数量趋势强奸性侵猥亵对比（有趋势线）.png" alt="性侵类案件文书数量趋势图" class="w-full h-auto rounded-lg shadow-md">
-                </div>
-                <div class="md:w-1/2">
-                    <p class="mb-6">
+                    <p class="mb-6 first-indent">
                         整体来看，2014-2020 年前后，三类案件文书量多呈上升或波动上升趋势，这反映出社会对性侵类案件的关注度提升、司法机关主动治理发力，更多案件进入了统计流程。2014-2020 年是司法 “显效” 期：强奸案件的文书数量从 2014 年的 3061 份逐步攀升，2020 年前后达到 4276 份的峰值；猥亵案件的文书数量从 715 份增至 2045 份，这是 “微小伤害被正视” 的过程；性侵案件的文书数量则从 45 份增至 237 份。
                     </p>
-                    <p class="mb-6">
+                    <p class="mb-6 first-indent">
                         这背后，首先是法律认定的细化驱动：2015 年《刑法修正案（九）》细化了猥亵罪认定，明确 “公共场所猥亵” 等情形入刑；2016 年强制报告制度推行，要求校园、托管机构等密切接触未成年人的行业，发现猥亵必须报案，让校园内的 “隐性侵犯” 难以遁形；2017 年最高检出台《关于办理性侵未成年人案件的意见》，明确了 “熟人性侵”“未成年人性侵” 的认定标准。
                     </p>
-                    <p class="mb-6">
+                    <p class="mb-6 first-indent">
                         其次得益于跨部门协同发力，以上海浦东为例，2019 年通过学校心理老师、社区网格员联动排查，发现了 11 起未成年性侵案并推动立案，让 “模糊伤害” 被清晰界定，案件得以进入司法统计。在国家和社会的助力下，越来越多的案件被看见。同时政策与普法正推动更多案件曝光。2017 年最高检等部门联合出台《关于依法惩治性侵未成年人犯罪的意见》，强化了对性侵案件的打击力度。比如广东 2018 年推行 “一站式” 取证机制（集询问、取证、心理疏导于一体），降低了受害者的报案顾虑。社会普法工程的助力，2016-2020 年 “法治进校园” 活动覆盖全国，媒体对性侵案件的持续曝光让公众对强奸犯罪的认知深化，更多隐案 “浮出水面”。
                     </p>
-                    <p>
+                    <p class="mb-6 first-indent">
                         2020 年后，三类案件文书量均有所下降（强奸降至 449 份，猥亵降至 226 份，性侵降至 31 份）。
 这既体现了治理成效显现的积极面，也隐含着经济薄弱地区案件 “应统未统” 等复杂问题。比如因警力不足、取证周期长导致的未录入统计问题；或是非刑处理分流，2021 年多地试点 “治安调解 + 训诫” 处理轻微猥亵案，像南京 2022 年 25% 的此类案件未进入刑事流程，导致文书减少；又或是因传统观念束缚，受害者觉得 “羞耻” 且维权渠道狭窄而未报案，案件的 “沉默” 掩盖了真实伤害。
                     </p>
-					<p class="mb-6">
+					<p class="mb-6 first-indent">
 						若能推进司法资源均衡（比如为薄弱地区建设 “移动司法站”）、深化观念普法（通过乡村广播 + 短视频宣传），短期内案件文书量或许会 “企稳”（更多隐案被挖掘），长期随着治理成效累加将 “缓降”，反映出真实的犯罪遏制态势。若资源差距持续存在、观念未能破冰，数据可能会 “低位震荡”，掩盖真实的犯罪状况，导致部分伤害持续 “沉默”。
 					</p>
+                </div>
+                <!-- 图片部分在右 -->
+                <div class="md:w-1/2">
+                    <img src="2014-2024 年性侵类案件文书数量趋势强奸性侵猥亵对比.png" alt="性侵类案件文书数量趋势图" class="w-full h-auto rounded-lg shadow-md">
                 </div>
             </div>
         </div>
@@ -664,13 +799,13 @@
         <div class="content-container">
             <h2 class="section-title">结语：性侵案件的多维镜像：伤害、诉求与治理叩问</h2>
             <div class="conclusion">
-                <p class="mb-6">
+                <p class="mb-6 first-indent">
                     这些或愤怒谴责、或揪心呼吁的评论词云，亲属、师生、职场场景下量刑差异的呈现，地域经济与案例数量关联的分布图谱，以及性侵类案件文书数量的时间曲线，共同织就性侵案件的复杂现实。
 				</p>
-				<p class="mb-6">
+				<p class="mb-6 first-indent">
 					不同场景与关系里，伤害各有形态，社会对严惩恶行的诉求同频共振，却也显露出司法资源、舆论聚焦与治理实践间的缝隙。
 				</p>
-				<p class="mb-6">
+				<p class="mb-6 first-indent">
 					每一组数据、每一个词汇背后，都是个体创伤与社会治理命题的深刻缠绕，提醒我们守护安全、捍卫正义的漫漫长路，要跨越认知与地域的沟壑，让 “严惩” 不再只是激昂呼声，真正成为每起案件中触手可及的公平正义，照亮那些曾被黑暗遮蔽的角落 。
                 </p>
             </div>
