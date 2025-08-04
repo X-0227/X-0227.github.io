@@ -420,18 +420,35 @@
 
 <body class="bg-light min-h-screen overflow-x-hidden">
     <!-- 导航栏 -->
-    <nav id="main-nav" class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<nav id="main-nav" class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-3">
+        <!-- 使用flex容器包裹所有导航元素 -->
+        <div class="flex justify-between items-center">
+            <!-- 左侧logo -->
             <a href="#page1" class="text-primary font-bold text-xl">权力不对等性侵案件</a>
+            
+            <!-- 中间导航链接 - 仅桌面显示 -->
             <div class="hidden md:flex space-x-8">
-
+                <a href="#page1" class="nav-link"></a>
+                <a href="#page2" class="nav-link"></a>
+                <a href="#page3" class="nav-link"></a>
+                <a href="#page4" class="nav-link"></a>
+                <a href="#page5" class="nav-link"></a>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden text-primary text-2xl">
-                <i class="fa fa-bars"></i>
-            </button>
+            
+            <!-- 右侧控制区：音乐按钮和移动菜单按钮 -->
+            <div class="flex items-center space-x-4">
+                <button id="music-toggle" class="text-primary hover:text-primary/70 transition-colors">
+                    <i class="fa fa-music text-2xl music-spin"></i>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-primary text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
         </div>
+    </div>
+</nav>
 
-    </nav>
 
     <!-- 第1页：受害者的情感 -->
     <section id="page1" class="section flex items-center justify-center bg-light relative overflow-hidden">
@@ -466,7 +483,7 @@
 
         <!-- 音频元素 -->
         <audio id="bg-music" loop>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+            <source src="https://m801.music.126.net/20250805030923/cf3dfc137be6def07feb5bdc02f9ecf0/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/56730012870/c06c/8e6f/609e/129f0c9ea04741c46e3e3bf7c6561398.mp3?vuutv=N972+TSyRuU+XrqqCjKQ5gakvOs/x9UPIORL02Ogco4yonUIfXZQrHOLW1jYbQMQDRz8PW9IZN1kbPdbdQsbd4xHYJAN8S0NcPi1e7jcCco=" type="audio/mpeg" />
         </audio>
 
         <div class="scroll-indicator">
@@ -722,7 +739,7 @@ window.addEventListener('load', function() {
                         <p class="mb-6 first-indent">
                             在图中可以看到，亲属类性侵案件刑罚在三类之中最严重，达到了24件。从法律角度，家属性侵更容易满足重刑条件。比如监护人身份直接触发刑法第236条“情节恶劣”，12岁以下未成年被害人则自动适用“强奸幼女”加重条款。另外，家属性侵因长期共居性侵多次发生的可能性更大，往往能提取到更多生物证据，容易形成证据链。
                         </p>
-			<p class="mb-6 first-indent">
+						<p class="mb-6 first-indent">
                             三类权势性侵本质是权力不对等关系下的暴力与掠夺。因此，国家需要完善法律法规，如在刑法中将教师等具有一定监护属性的职责身份列为法定加重情节，同时修改性同意年龄加强对未成年受害者的保护。还可以建立全国教育从业者犯罪数据库，施行性犯罪者终身禁入教育行业。
                         </p>
                     </div>
@@ -789,9 +806,9 @@ window.addEventListener('load', function() {
                     <p class="mb-6 first-indent">
                         2019年后，三类案件文书量均有所下降（强奸案文书降至 449 份，猥亵案文书降至 226 份，性侵案文书降至 31 份）。这既体现了治理成效显现的积极面，也隐含着经济薄弱地区案件 “应统未统” 等复杂问题。比如因警力不足、取证周期长导致的未录入统计问题；或是非刑处理分流，2021 年习近平总书记提出 “完善预防性法律制度”，部分地区尝试将治安调解与训诫结合，探索轻微违法案件的非监禁化处理路径。例如，江苏、浙江等地公安机关在 “枫桥经验” 框架下，针对情节轻微、未造成实质性伤害的猥亵行为，尝试通过调解修复社会关系，同时以训诫强化教育威慑来解决纠纷；又或是因传统观念束缚，受害者觉得 “羞耻” 且维权渠道狭窄而未报案，案件的 “沉默” 掩盖了真实伤害。
                     </p>
-		    <p class="mb-6 first-indent">
-			若能推进司法资源均衡（比如为薄弱地区建设 “移动司法站”）、深化观念普法（通过乡村广播 + 短视频宣传），短期内案件文书量或许会 “企稳”（更多隐案被挖掘），长期随着治理成效累加将 “缓降”，反映出真实的犯罪遏制态势。若资源差距持续存在、观念未能破冰，数据可能会 “低位震荡”，掩盖真实的犯罪状况，导致部分伤害持续 “沉默”。
-		    </p>
+					<p class="mb-6 first-indent">
+						若能推进司法资源均衡（比如为薄弱地区建设 “移动司法站”）、深化观念普法（通过乡村广播 + 短视频宣传），短期内案件文书量或许会 “企稳”（更多隐案被挖掘），长期随着治理成效累加将 “缓降”，反映出真实的犯罪遏制态势。若资源差距持续存在、观念未能破冰，数据可能会 “低位震荡”，掩盖真实的犯罪状况，导致部分伤害持续 “沉默”。
+					</p>
                 </div>
             </div>
         </div>
@@ -1270,8 +1287,42 @@ function initPage8() {
                 initPage8();
             }
         });
+		// 在现有<script>标签内添加以下代码
+document.addEventListener('DOMContentLoaded', function() {
+    const musicToggle = document.getElementById('music-toggle');
+    const bgMusic = document.getElementById('bg-music');
+    const musicIcon = musicToggle.querySelector('i');
+    
+    // 初始化音乐状态
+    let isPlaying = false;
+    
+    // 音乐按钮点击事件
+    musicToggle.addEventListener('click', function() {
+        if (isPlaying) {
+            bgMusic.pause();
+            musicIcon.classList.remove('fa-pause', 'music-spin');
+            musicIcon.classList.add('fa-music');
+        } else {
+            bgMusic.play().catch(error => {
+                console.log('音乐播放需要用户交互:', error);
+                // 自动播放失败时可以显示提示
+                alert('请点击播放按钮开启背景音乐');
+            });
+            musicIcon.classList.remove('fa-music');
+            musicIcon.classList.add('fa-pause', 'music-spin');
+        }
+        isPlaying = !isPlaying;
+    });
+    
+    // 页面交互时尝试自动播放（提升自动播放成功率）
+    document.body.addEventListener('click', function enableAudio() {
+        if (!isPlaying) {
+            bgMusic.load();
+        }
+        document.body.removeEventListener('click', enableAudio);
+    }, { once: true });
+});
     </script>
 </body>
 
 </html>    
-
