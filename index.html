@@ -1373,7 +1373,9 @@ function initPage8() {
                 rect.bottom >= 0
             );
         }
-
+const pageInited = {
+  page8: false // 关键：初始化为false，允许首次执行
+};
         // 监听滚动，初始化可见元素
         window.addEventListener('scroll', () => {
             if (isElementInViewport(document.getElementById('page3'))) {
@@ -1382,9 +1384,12 @@ function initPage8() {
             if (isElementInViewport(document.getElementById('page4'))) {
                 initPage4();
             }
-            if (isElementInViewport(document.getElementById('page8'))) {
-                initPage8();
-            }
+            const page8 = document.getElementById('page8');
+    // 只在首次进入视口时执行一次
+    if (page8 && isElementInViewport(page8) && !pageInited.page8) {
+        initPage8();
+        pageInited.page8 = true; // 标记为已初始化
+    }
         });
 		// 在现有<script>标签内添加以下代码
 document.addEventListener('DOMContentLoaded', function() {
