@@ -24,6 +24,38 @@
                 }
             }
         }
+		// 预加载漫画图片
+    document.addEventListener('DOMContentLoaded', function() {
+      // 漫画图片路径列表（与原代码中的comicGroups对应）
+      const allComicImages = [
+        "comics/comic-1.png", "comics/comic-2.png", "comics/comic-3.png",
+        "comics/comic-4.png", "comics/comic-5.png", "comics/comic-6.png",
+        "comics/comic-7.png", "comics/comic-8.png", "comics/comic-9.png",
+        "comics/comic-10.png", "comics/comic-11.png", "comics/comic-12.png",
+        "comics/comic-13.png", "comics/comic-14.png", "comics/comic-15.png",
+        "comics/comic-16.png", "comics/comic-17.png", "comics/comic-18.png"
+      ];
+
+      // 预加载计数器（用于跟踪加载进度）
+      let loadedCount = 0;
+      const totalCount = allComicImages.length;
+
+      // 遍历图片列表，创建Image对象预加载
+      allComicImages.forEach(src => {
+        const img = new Image();
+        // 图片加载完成时计数
+        img.onload = function() {
+          loadedCount++;
+          console.log(`预加载完成：${src}（${loadedCount}/${totalCount}）`);
+        };
+        // 图片加载失败时提示
+        img.onerror = function() {
+          console.error(`预加载失败：${src}`);
+        };
+        // 开始加载图片
+        img.src = src;
+      });
+    });
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
@@ -528,7 +560,14 @@
         <!-- 三组漫画容器，每组包含标题和图片区域 -->
         <div class="comic-group mb-12">
             <h3 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-6">被至亲阴影笼罩的TA<span class="text-lg opacity-80 ml-2">（2008年黑龙江省汤兰兰案）</span></h3>
-            <div id="group-1" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+            <!-- 在每个漫画组容器中添加加载提示（以group-1为例，其他组同理） -->
+			<div id="group-1" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			  <!-- 初始加载提示 -->
+			  <div class="comic-loading w-full h-64 flex items-center justify-center bg-gray-100 rounded-lg">
+				<i class="fa fa-spinner fa-spin text-primary text-3xl"></i>
+				<span class="ml-2 text-gray-500">图片加载中...</span>
+			  </div>
+			</div>
         </div>
         
         <div class="comic-group mb-12">
