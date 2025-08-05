@@ -425,7 +425,7 @@
         <!-- 使用flex容器包裹所有导航元素 -->
         <div class="flex justify-between items-center">
             <!-- 左侧logo -->
-            <a href="#page1" class="text-primary font-bold text-xl">权力不对等性侵案件</a>
+            <a href="#page1" class="text-primary font-bold text-xl">不想看你受一样的伤害——数说权力性侵下的共同救赎</a>
             
             <!-- 中间导航链接 - 仅桌面显示 -->
             <div class="hidden md:flex space-x-8">
@@ -480,9 +480,10 @@
         </div>
 
         <!-- 音频元素 -->
-        <audio id="bg-music" loop>
-            <source src="https://m801.music.126.net/20250805030923/cf3dfc137be6def07feb5bdc02f9ecf0/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/56730012870/c06c/8e6f/609e/129f0c9ea04741c46e3e3bf7c6561398.mp3?vuutv=N972+TSyRuU+XrqqCjKQ5gakvOs/x9UPIORL02Ogco4yonUIfXZQrHOLW1jYbQMQDRz8PW9IZN1kbPdbdQsbd4xHYJAN8S0NcPi1e7jcCco=" type="audio/mpeg" />
-        </audio>
+		<audio id="bg-music" loop>
+		  <source src="bgm.mp3" type="audio/mpeg">
+		  你的浏览器不支持音频播放
+		</audio>
 
         <div class="scroll-indicator">
             <i class="fa fa-angle-down"></i>
@@ -676,10 +677,6 @@ window.addEventListener('load', function() {
         <div class="content-container">
             <h2 class="section-title">一、词云风暴：公众的集体呐喊</h2>
             <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/2 relative h-[500px]">
-                    <div id="emoji-layer" class="absolute inset-0 pointer-events-none overflow-visible z-10"></div>
-					<img src="wordcloud-1.png" alt="词云图">
-                </div>
                 <div class="md:w-1/2">
                     <p class="mb-6 first-indent">
                         当“败类”、“禽兽不如”、“血馒头”等词汇喷薄而出时，这已不仅是对一桩悲剧的哀悼，而是对结构性暴力的血泪控诉：
@@ -692,6 +689,10 @@ window.addEventListener('load', function() {
 					<p class="mb-6 first-indent">
 						与之交织的“反抗”、“希望”，则揭示了她们从深渊向上攀爬时，每一寸肌肤都沾满血泪的挣扎。图中多次出现“恶人”、“罪犯”、“畜生”、“人渣”、“垃圾”——这些极致贬斥的标签，是社会对施暴者的控诉。“保护”、 “赔偿”、“公道”、“正义”的反复叩问，是对制度回响的绝望呼唤。
                     </p>
+                </div>
+				<div class="md:w-1/2 relative h-[500px]">
+                    <div id="emoji-layer" class="absolute inset-0 pointer-events-none overflow-visible z-10"></div>
+					<img src="wordcloud-1.png" alt="词云图">
                 </div>
             </div>
         </div>
@@ -722,9 +723,6 @@ window.addEventListener('load', function() {
                 </div>
                 <div class="flex flex-col md:flex-row gap-8">
                     <div class="md:w-1/2">
-                        <img src="2014-2024年三类权势性侵案件的数量比例关系以及恶劣程度.png" alt="三类权势性侵案件数据图" class="w-full h-auto rounded-lg shadow-md">
-                    </div>
-                    <div class="md:w-1/2">
                         <p class="mb-6 first-indent">
                             常见的权势性侵案件可以大致分为三类亲属、师生、职场，施暴者通常为亲属（父亲、继父等）、教师（含教练、家教、补习老师等）、上司。我们将刑事案件中的刑罚定义为两类，拘役和五年以下有期徒刑为轻刑罚，五年以上有期徒刑和无期徒刑为重刑罚，以量刑判断案件恶劣程度。
                         </p>
@@ -741,6 +739,17 @@ window.addEventListener('load', function() {
                             三类权势性侵本质是权力不对等关系下的暴力与掠夺。因此，国家需要完善法律法规，如在刑法中将教师等具有一定监护属性的职责身份列为法定加重情节，同时修改性同意年龄加强对未成年受害者的保护。还可以建立全国教育从业者犯罪数据库，施行性犯罪者终身禁入教育行业。
                         </p>
                     </div>
+					<div class="md:w-1/2">
+                        <img src="2014-2024年三类权势性侵案件的数量比例关系以及恶劣程度.png" alt="三类权势性侵案件数据图" class="w-full h-auto rounded-lg shadow-md">
+						<div class="mt-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        数据来源：
+					</p>
+					<p class="text-sm text-gray-700 leading-relaxed">
+						根据中国裁判文书网2014-2024年部分性侵、猥亵、强奸判决书，整理区分出权势性侵的类型、刑期刑罚。把刑事案件中的刑期定义为两类，一类是轻刑罚（拘役和五年以下有期徒刑），另一类是重刑罚（五年及以上有期徒刑和无期徒刑）。
+					</p>
+					</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -754,9 +763,6 @@ window.addEventListener('load', function() {
         <div class="content-container">
             <h2 class="section-title">三、数据表里的温差 —— 案例分布藏玄机</h2>
             <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/2">
-                    <img src="2014-2024各省份经济与案例数量关联性.gif" alt="2014-2024各省份经济与案例数量关联性" class="w-full h-auto rounded-lg shadow-md">
-                </div>
                 <div class="md:w-1/2">
                     <p class="mb-6 first-indent">
                         近十年的各省份经济与性侵案例数量的关联性，并非简单的线性相关。
@@ -776,6 +782,23 @@ window.addEventListener('load', function() {
                         因此，我国应统筹分配司法资源，让那些因司法光照不足的“隐秘角落”亮起来；提升民众的维权意识，让“沉默的声音”喊出来；拓宽维权渠道，稳稳接住人民的声音。
                     </p>
                 </div>
+				<div class="md:w-1/2">
+                    <img src="2014-2024各省份经济与案例数量关联性.gif" alt="2014-2024各省份经济与案例数量关联性" class="w-full h-auto rounded-lg shadow-md">
+					<div class="mt-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        数据来源：
+					</p>
+					<p class="text-sm text-gray-700 leading-relaxed">
+						1.中国裁判文书网 关键词：性侵、猥亵、强奸 年份:2014-2024
+					</p>
+					<p class="text-sm text-gray-700 leading-relaxed">
+						2.国家统计局 年份:2014-2024
+					</p>
+					<p class="text-sm text-gray-700 leading-relaxed">
+						最后整理出省份、地区生产总值、文书数量。
+                    </p>
+					</div>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -788,9 +811,6 @@ window.addEventListener('load', function() {
         <div class="content-container">
             <h2 class="section-title">四、隐案的显影剂 —— “看不到” 不等于 “不存在”</h2>
             <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/2">
-                    <img src="2014-2024 年性侵类案件文书数量趋势强奸性侵猥亵对比.png" alt="性侵类案件文书数量趋势图" class="w-full h-auto rounded-lg shadow-md">
-                </div>
                 <div class="md:w-1/2">
                     <p class="mb-6 first-indent">
                         整体来看，2014-2019 年前后，三类案件文书量多呈上升或波动上升趋势，这反映出社会对性侵类案件的关注度提升、司法机关主动治理发力，更多案件进入了统计流程。2014-2019年是司法 “显效” 期：强奸案件的文书数量从 2014 年的 3061 份逐步攀升，2019年前后达到 4276 份的峰值；猥亵案件的文书数量从 715 份增至 2045 份；性侵案件的文书数量则从 45 份增至 237 份，这是 “微小伤害被正视” 的过程。
@@ -807,6 +827,17 @@ window.addEventListener('load', function() {
 					<p class="mb-6 first-indent">
 						若能推进司法资源均衡（比如为薄弱地区建设 “移动司法站”）、深化观念普法（通过乡村广播 + 短视频宣传），短期内案件文书量或许会 “企稳”（更多隐案被挖掘），长期随着治理成效累加将 “缓降”，反映出真实的犯罪遏制态势。若资源差距持续存在、观念未能破冰，数据可能会 “低位震荡”，掩盖真实的犯罪状况，导致部分伤害持续 “沉默”。
 					</p>
+                </div>
+				<div class="md:w-1/2">
+                    <img src="2014-2024 年性侵类案件文书数量趋势强奸性侵猥亵对比.png" alt="性侵类案件文书数量趋势图" class="w-full h-auto rounded-lg shadow-md">
+					<div class="mt-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        数据来源：
+					</p>
+					<p class="text-sm text-gray-700 leading-relaxed">
+						根据中国裁判文书网2014-2024年部分性侵、猥亵、强奸判决书，整理区分出权力性侵类别、文书数量、年份。
+					</p>
+					</div>
                 </div>
             </div>
         </div>
@@ -854,8 +885,8 @@ window.addEventListener('load', function() {
         <div class="content-container">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold mb-2">权力不对等下性侵案件受害者的内心世界</h3>
-                    <p class="text-gray-300">关注性侵问题，支持受害者，共建和谐社会</p>
+                    <h3 class="text-xl font-bold mb-2">不想看你受一样的伤害——数说权力性侵下的共同救赎</h3>
+                    <p class="text-gray-300">关注性侵问题，共建和谐社会</p>
                 </div>
                 <div class="flex space-x-4">
                     <a href="#" class="text-white hover:text-primary transition-colors">
