@@ -630,10 +630,16 @@ function initComics() {
     }
 }
 
-// 添加漫画图片
+// 添加漫画图片（包含加载提示）
 function addComicImage(src, container) {
     const imgContainer = document.createElement('div');
-    imgContainer.className = 'comic-item overflow-hidden rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:scale-[2.00]  relative z-10';
+    imgContainer.className = 'comic-item overflow-hidden rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:scale-[2.00] relative z-10';
+    
+    // 创建加载提示元素
+    const loadingIndicator = document.createElement('div');
+    loadingIndicator.className = 'loading-indicator absolute inset-0 flex items-center justify-center bg-gray-100 text-pink-500';
+    loadingIndicator.textContent = '图片正在加载中...';
+    imgContainer.appendChild(loadingIndicator);
     
     const img = document.createElement('img');
     img.src = src;
@@ -643,20 +649,17 @@ function addComicImage(src, container) {
     
     container.appendChild(imgContainer);
     
-    // 图片加载完成后淡入显示
+    // 图片加载完成后隐藏加载提示并显示图片
     img.onload = function() {
+        loadingIndicator.style.display = 'none';
         img.style.opacity = '1';
     };
     
     // 如果图片加载失败，显示错误提示
     img.onerror = function() {
-        img.alt = `漫画 ${currentGroup * 6 + currentIndexInGroup + 1} 加载失败`;
-        img.style.backgroundColor = '#f1f1f1';
-        img.style.display = 'flex';
-        img.style.justifyContent = 'center';
-        img.style.alignItems = 'center';
-        img.style.height = '300px';
-        img.style.opacity = '1';
+        loadingIndicator.textContent = '图片加载失败';
+        loadingIndicator.style.color = '#dc2626'; // 红色错误提示
+        img.style.display = 'none';
     };
 }
 
@@ -713,6 +716,7 @@ window.addEventListener('load', function() {
 });
 
 </script>
+
 
 
     <!-- 第3页：一、词云风暴：沉默者的集体呐喊 -->
