@@ -1324,6 +1324,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 初始化音乐状态
     let isPlaying = false;
+	// 初始化音乐图标状态（默认不旋转）
+musicIcon.classList.remove('music-spin');
     
     // 音乐按钮点击事件
     musicToggle.addEventListener('click', function() {
