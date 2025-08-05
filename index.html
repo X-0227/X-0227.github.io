@@ -415,6 +415,7 @@
 		.first-indent {
         text-indent: 2em; /* 首行缩进2个字符宽度 */
     }
+
     </style>
 </head>
 
@@ -536,7 +537,7 @@
         </div>
         
         <div class="comic-group">
-            <h3 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-6">职场里被权力围猎的TA<span class="text-lg opacity-80 ml-2">（2023年天津女子出差被老板性侵事件）</span></h3>
+            <h3 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-6">职场里被权力围猎的TA<span class="text-lg opacity-80 ml-2 ">（2023年天津女子出差被老板性侵事件）</span></h3>
             <div id="group-3" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
         </div>
         
@@ -591,7 +592,7 @@ function initComics() {
 // 添加漫画图片
 function addComicImage(src, container) {
     const imgContainer = document.createElement('div');
-    imgContainer.className = 'comic-item overflow-hidden rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02]';
+    imgContainer.className = 'comic-item overflow-hidden rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:scale-[2.00]  relative z-10';
     
     const img = document.createElement('img');
     img.src = src;
@@ -669,6 +670,7 @@ window.addEventListener('load', function() {
     
     observer.observe(document.getElementById('comic-section'));
 });
+
 </script>
 
 
