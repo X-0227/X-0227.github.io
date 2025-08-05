@@ -514,7 +514,7 @@
 
         <!-- 音频元素 -->
 		<audio id="bg-music" loop>
-		  <source src="bgm.mp3" type="audio/mpeg">
+		  <source src="charts/bgm.mp3" type="audio/mpeg">
 		  你的浏览器不支持音频播放
 		</audio>
 
@@ -525,6 +525,12 @@
 
     <!-- 第2页：导语 -->
     <section id="page2" class="section bg-white">
+	<!-- 背景图片层 -->
+    <div class="absolute inset-0 z-0 flex items-center justify-center">
+        <img src="comics/girl1.png" 
+             alt="背景图片描述" 
+             class="max-w-[85%] max-h-[85%] object-contain opacity-30">
+    </div>
         <div class="content-container">
             <h2 class="section-title">导语</h2>
             <div id="intro-text">
@@ -723,10 +729,13 @@ window.addEventListener('load', function() {
 					<p class="mb-6 first-indent">
 						与之交织的“反抗”、“希望”，则揭示了她们从深渊向上攀爬时，每一寸肌肤都沾满血泪的挣扎。图中多次出现“恶人”、“罪犯”、“畜生”、“人渣”、“垃圾”——这些极致贬斥的标签，是社会对施暴者的控诉。“保护”、 “赔偿”、“公道”、“正义”的反复叩问，是对制度回响的绝望呼唤。
                     </p>
+					<div class="mt-4">
+					<img src="comics/hug.png" alt="鼓励" class="w-full h-auto rounded-lg" style="width: 80%; height: auto;">
+					</div>
                 </div>
 				<div class="md:w-1/2 relative h-[500px]">
                     <div id="emoji-layer" class="absolute inset-0 pointer-events-none overflow-visible z-10"></div>
-					<img src="wordcloud-1.png" alt="词云图">
+					<img src="charts/wordcloud-1.png" alt="词云图">
                 </div>
             </div>
         </div>
@@ -774,7 +783,7 @@ window.addEventListener('load', function() {
                         </p>
                     </div>
 					<div class="md:w-1/2">
-                        <img src="2014-2024年三类权势性侵案件的数量比例关系以及恶劣程度.png" alt="三类权势性侵案件数据图" class="w-full h-auto rounded-lg shadow-md">
+                        <img src="charts/2014-2024年三类权势性侵案件的数量比例关系以及恶劣程度.png" alt="三类权势性侵案件数据图" class="w-full h-auto rounded-lg shadow-md">
 						<div class="mt-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
                     <p class="text-sm text-gray-700 leading-relaxed">
                         数据来源：
@@ -782,6 +791,9 @@ window.addEventListener('load', function() {
 					<p class="text-sm text-gray-700 leading-relaxed">
 						根据中国裁判文书网2014-2024年部分性侵、猥亵、强奸判决书，整理区分出权势性侵的类型、刑期刑罚。把刑事案件中的刑期定义为两类，一类是轻刑罚（拘役和五年以下有期徒刑），另一类是重刑罚（五年及以上有期徒刑和无期徒刑）。
 					</p>
+					</div>
+					<div class="mt-4">
+					<img src="comics/book.png" alt="法典" class="w-full h-auto rounded-lg" style="width: 65%; height: auto;">
 					</div>
                     </div>
                 </div>
@@ -817,16 +829,16 @@ window.addEventListener('load', function() {
                     </p>
                 </div>
 				<div class="md:w-1/2">
-                    <img src="2014-2024各省份经济与案例数量关联性.gif" alt="2014-2024各省份经济与案例数量关联性" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="charts/2014-2024各省份经济与案例数量关联性.gif" alt="2014-2024各省份经济与案例数量关联性" class="w-full h-auto rounded-lg shadow-md">
 					<div class="mt-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
                     <p class="text-sm text-gray-700 leading-relaxed">
                         数据来源：
 					</p>
 					<p class="text-sm text-gray-700 leading-relaxed">
-						1.中国裁判文书网 关键词：性侵、猥亵、强奸 年份:2014-2024
+						1.中国裁判文书网 关键词：性侵、猥亵、强奸 年份：2014-2024
 					</p>
 					<p class="text-sm text-gray-700 leading-relaxed">
-						2.国家统计局 年份:2014-2024
+						2.国家统计局 年份：2014-2024
 					</p>
 					<p class="text-sm text-gray-700 leading-relaxed">
 						最后整理出省份、地区生产总值、文书数量。
@@ -863,7 +875,7 @@ window.addEventListener('load', function() {
 					</p>
                 </div>
 				<div class="md:w-1/2">
-                    <img src="2014-2024 年性侵类案件文书数量趋势强奸性侵猥亵对比.png" alt="性侵类案件文书数量趋势图" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="charts/2014-2024 年性侵类案件文书数量趋势强奸性侵猥亵对比.png" alt="性侵类案件文书数量趋势图" class="w-full h-auto rounded-lg shadow-md">
 					<div class="mt-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
                     <p class="text-sm text-gray-700 leading-relaxed">
                         数据来源：
@@ -871,6 +883,9 @@ window.addEventListener('load', function() {
 					<p class="text-sm text-gray-700 leading-relaxed">
 						根据中国裁判文书网2014-2024年部分性侵、猥亵、强奸判决书，整理区分出权力性侵类别、文书数量、年份。
 					</p>
+					</div>
+					<div class="mt-4">
+					<img src="comics/page6.png" alt="法律援助中心" class="w-full h-auto rounded-lg shadow-md">
 					</div>
                 </div>
             </div>
@@ -882,8 +897,21 @@ window.addEventListener('load', function() {
 
     <!-- 第7页：结语：性侵案件的多维镜像：伤害、诉求与治理叩问 -->
     <section id="page7" class="section bg-light">
-        <div class="content-container">
+    
+    <!-- 右下角背景图 -->
+    <div class="absolute bottom-8 right-8">
+        <img src="comics/girl2.png" 
+             alt="女孩展翅高飞" 
+             class="w-96 h-auto opacity-80 hover:opacity-80 transition-opacity duration-300">
+    </div>
+        <div class="content-container relative z-10">
             <h2 class="section-title">结语：性侵案件的多维镜像：伤害、诉求与治理叩问</h2>
+			<!-- 左上角背景图 -->
+    <div class="absolute top-75 left-8">
+        <img src="comics/sun.png" 
+             alt="太阳" 
+             class="w-48 h-auto opacity-80 hover:opacity-70 transition-opacity duration-300">
+    </div>
             <div class="conclusion">
                 <p class="mb-6 first-indent">
                     这些或愤怒谴责、或揪心呼吁的评论词云，亲属、师生、职场场景下量刑差异的呈现，地域经济与案例数量关联的分布图谱，以及性侵类案件文书数量的时间曲线，共同织就性侵案件的复杂现实。
@@ -997,7 +1025,7 @@ window.addEventListener('load', function() {
 
         // 开始按钮点击
         startBtn.addEventListener('click', () => {
-            window.location.href = '情感体会.html';
+            window.location.href = 'charts/情感体会.html';
         });
 
         // 音乐控制
