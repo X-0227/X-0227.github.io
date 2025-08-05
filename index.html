@@ -792,9 +792,85 @@ window.addEventListener('load', function() {
 						根据中国裁判文书网2014-2024年部分性侵、猥亵、强奸判决书，整理区分出权势性侵的类型、刑期刑罚。把刑事案件中的刑期定义为两类，一类是轻刑罚（拘役和五年以下有期徒刑），另一类是重刑罚（五年及以上有期徒刑和无期徒刑）。
 					</p>
 					</div>
-					<div class="mt-4">
-					<img src="comics/book.png" alt="法典" class="w-full h-auto rounded-lg" style="width: 65%; height: auto;">
-					</div>
+					<div class="mt-4 relative" style="width: 65%; margin: 0 auto;">
+    <!-- 法典图片（中心点为目标） -->
+    <img src="comics/book.png" alt="法典" class="w-full h-auto rounded-lg relative z-10">
+    
+    <!-- 文字钻入容器 -->
+    <div class="absolute inset-0 overflow-visible">
+        <!-- 多条法律条文（从右上角加入） -->
+        <p class="drill-text absolute text-white text-sm" style="--delay: 0s; --rotate: -5deg;">
+            第二百三十六条 【强奸罪】
+        </p>
+        <p class="drill-text absolute text-white text-sm" style="--delay: 0.3s; --rotate: 0deg;">
+            以暴力、胁迫或者其他手段强奸妇女的，
+        </p>
+        <p class="drill-text absolute text-white text-sm" style="--delay: 0.6s; --rotate: 5deg;">
+            处三年以上十年以下有期徒刑。
+        </p>
+		<p class="drill-text absolute text-white text-sm" style="--delay: 0.6s; --rotate: 5deg;">
+            奸淫不满十四周岁的幼女的，以强奸论，从重处罚。
+        </p>
+        <p class="drill-text absolute text-white text-sm" style="--delay: 0.9s; --rotate: -8deg;">
+            第二百三十七条 【强制猥亵、侮辱罪】
+        </p>
+        <p class="drill-text absolute text-white text-sm" style="--delay: 1.2s; --rotate: 8deg;">
+            以暴力、胁迫或者其他方法强制猥亵他人或者侮辱妇女的，
+        </p>
+        <p class="drill-text absolute text-white text-sm" style="--delay: 1.5s; --rotate: -3deg;">
+            处五年以下有期徒刑或者拘役。
+        </p>
+    </div>
+</div>
+
+<style>
+/* 定义中心点（图片中心） */
+:root {
+    --center-x: 50%; /* 图片水平中心 */
+    --center-y: 50%; /* 图片垂直中心 */
+    --total-duration: 3s; /* 单条文字完整循环时长 */
+}
+
+/* 循环钻入动画：从右上角→中心点→复位→重复 */
+@keyframes drillLoop {
+    0% {
+        /* 初始状态：右上角外侧，带旋转角度 */
+        top: -30px;
+        right: -100px; /* 右上角定位（靠右） */
+        transform: rotate(var(--rotate)) scale(0.8);
+        opacity: 1;
+    }
+    60% {
+        /* 接近中心：逐渐调整角度，放大 */
+        transform: rotate(0deg) scale(1.1);
+        opacity: 1;
+    }
+    80% {
+        /* 到达中心：开始消失 */
+        top: var(--center-y);
+        left: var(--center-x);
+        transform: translate(-50%, -50%) scale(0.3);
+        opacity: 0;
+    }
+    81%, 100% {
+        /* 复位：瞬间回到右上角起点 */
+        top: -30px;
+        right: -100px;
+        transform: rotate(var(--rotate)) scale(0.8);
+        opacity: 0; /* 复位时隐藏，避免闪烁 */
+    }
+}
+
+.drill-text {
+    /* 基础样式：不换行，带阴影 */
+    white-space: nowrap;
+    text-shadow: 0 0 3px #000;
+    z-index: 20; /* 文字在图片上方 */
+    /* 动画设置：循环播放 + 总时长 + 延迟 */
+    animation: drillLoop var(--total-duration) cubic-bezier(0.3, 0.2, 0.5, 1) infinite;
+    animation-delay: var(--delay);
+}
+</style>
                     </div>
                 </div>
             </div>
