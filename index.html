@@ -594,6 +594,113 @@
 			50% { transform: translateY(-3px); }
 		}
 
+
+    /* 移动端基础适配 */
+    @media (max-width: 768px) {
+        /* 导航栏调整 */
+        #main-nav .text-primary {
+            font-size: 1rem; /* 缩小移动端标题 */
+        }
+        
+        /* 第1页调整 */
+        #page1 {
+            padding-left: 0 !important; /* 移除移动端左侧固定偏移 */
+            justify-content: center; /* 内容居中 */
+        }
+        
+        #page1 .content-container {
+            padding: 0 1rem; /* 增加左右内边距 */
+        }
+        
+        #start-btn {
+            padding: 3px 10px !important; /* 调整按钮大小 */
+            font-size: 1rem !important;
+        }
+        
+        /* 通用section样式调整 */
+        .section {
+            padding-top: 60px !important; /* 减少顶部 padding */
+        }
+        
+        .content-container {
+            padding: 1rem !important; /* 减少容器内边距 */
+        }
+        
+        /* 漫画区域调整 */
+        .comic-item:hover {
+            transform: scale(1.1) !important; /* 移动端缩小放大比例 */
+        }
+        
+        .comic-group h3 {
+            font-size: 1.5rem !important; /* 缩小漫画组标题 */
+        }
+        
+        /* 词云区域调整 */
+        #page3 .md\\:w-1\\/2 {
+            width: 100% !important; /* 移动端单列显示 */
+        }
+        
+        #page3 .relative.h-\\[500px\\] {
+            height: 300px !important; /* 降低词云区域高度 */
+        }
+        
+        /* 数据认知页调整 */
+        #bar-container {
+            height: 12px !important; /* 缩小进度条高度 */
+        }
+        
+        #text-overlay {
+            font-size: 0.8rem !important; /* 缩小提示文字 */
+        }
+        
+        .label {
+            padding: 4px 10px !important; /* 缩小标签大小 */
+            font-size: 0.8rem !important;
+        }
+        
+        /* 图片提示框调整 */
+        .fun-tooltip {
+            font-size: 12px !important; /* 缩小提示文字 */
+            padding: 5px 10px !important;
+        }
+        
+        /* 结论区域调整 */
+        .conclusion {
+            width: 90% !important; /* 增加移动端宽度 */
+            padding: 1rem !important;
+            font-size: 1rem !important;
+        }
+        
+        /* 首行缩进在移动端优化 */
+        .first-indent {
+            text-indent: 1.5em !important; /* 减少缩进量 */
+        }
+        
+        /* 调整滚动指示器位置 */
+        .scroll-indicator {
+            bottom: 20px !important;
+            font-size: 20px !important;
+        }
+    }
+
+    /* 超小屏设备适配 (375px以下) */
+    @media (max-width: 375px) {
+        .section-title {
+            font-size: 1.5rem !important; /* 进一步缩小标题 */
+        }
+        
+        #page1 h1 span {
+            font-size: 2rem !important;
+        }
+        
+        .intro-paragraph {
+            font-size: 0.9rem !important; /* 缩小正文文字 */
+        }
+        
+        .comic-prompt {
+            font-size: 0.8rem !important; /* 缩小提示文字 */
+        }
+    }
     </style>
 </head>
 
