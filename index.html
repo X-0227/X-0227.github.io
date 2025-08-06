@@ -67,6 +67,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 80px;
+	
 }
 
 #negative-area {
@@ -221,6 +222,55 @@
                 transform: rotate(360deg);
             }
         }
+		/* 在现有@keyframes定义区域添加 */
+		@keyframes moveFromRight {
+			from {
+				transform: translateX(150vw); /* 从右侧画外进入 */
+				opacity: 0;
+			}
+			to {
+				transform: translateX(0); /* 移动到目标位置 */
+				opacity: 1;
+			}
+		}
+		/* 直接添加在全局样式中，不要放在 @layer utilities 里 */
+		@keyframes slideInFromRight {
+			0% {
+				transform: translateX(100vw); /* 从右侧屏幕外开始 */
+				opacity: 0;
+			}
+			100% {
+				transform: translateX(0); /* 移动到正常位置 */
+				opacity: 1;
+			}
+		}
+
+		/* 标题动画类 */
+		.slide-in-right {
+			animation: slideInFromRight 2.5s cubic-bezier(0.05, 0, 0.1, 1) forwards;
+		}
+
+		/* 延迟动画类（用于第二个标题） */
+		.delay-300 {
+			animation-delay: 0s;
+		}
+		/* 按钮浮现动画 */
+		@keyframes fadeInSlow {
+			from {
+				opacity: 0;
+				transform: translateY(20px); /* 稍微从下方升起 */
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		/* 按钮动画类 */
+		.btn-fade-in {
+			animation: fadeInSlow 1.5s ease-out forwards;
+			opacity: 0; /* 初始隐藏 */
+		}
 
         .word-item {
             position: absolute;
@@ -486,8 +536,18 @@
 
 
     <!-- 第1页：受害者的情感 -->
-    <section id="page1" class="section flex items-center justify-center bg-light relative overflow-hidden">
-        <!-- 背景装饰元素 -->
+    <section id="page1" class="section flex items-center justify-start pl-[35%] bg-light relative overflow-hidden">
+    <!-- 背景视频 -->
+    <div class="absolute inset-0 z-0">
+        <video class="absolute w-full h-full object-cover" autoplay loop muted playsinline>
+            <source src="comics/girl0.mp4" type="video/mp4">
+            你的浏览器不支持视频播放
+        </video>
+        <!-- 视频遮罩（可选，增强文字可读性） -->
+        <div class="absolute inset-0 bg-dark/0"></div>
+    </div>
+
+		<!-- 背景装饰元素 -->
         <div class="fixed inset-0 overflow-hidden">
             <div class="absolute top-1/4 left-1/3 w-64 h-64 rounded-full bg-primary/10 animate-float"></div>
             <div class="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-secondary/10 animate-float"
@@ -498,19 +558,19 @@
 
         <div class="content-container text-center z-10">
             <header class="mb-10">
-                <h1 class="leading-tight">
-                    <p class="text-[clamp(1.5rem,5vw,2.5rem)] font-medium text-dark mb-1">不想看你受一样的伤害</p>
-                    <span class="text-[clamp(2.5rem,7vw,5rem)] font-bold text-primary block">数说权势性侵下的共同救赎</span>
-                </h1>
-            </header>
+				<h1 class="leading-tight">
+					<!-- 第一个标题：添加 slide-in-right 类 -->
+					<p class="text-[clamp(1.5rem,2vw,2.5rem)] font-medium text-dark mb-1 slide-in-right">不想看你受一样的伤害</p>
+					<!-- 第二个标题：添加 slide-in-right 和 delay-300 类 -->
+					<span class="text-[clamp(2.5rem,4vw,5rem)] font-bold text-primary block slide-in-right delay-300">数说权势性侵下的共同救赎</span>
+				</h1>
+			</header>
 
             <button id="start-btn"
-                class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-[clamp(1.2rem,3vw,1.5rem)] flex items-center mx-auto">
-                <i class="fa fa-heartbeat mr-3"></i> 开始探索
-            </button>
-
-            
-                </button>
+				class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-[clamp(1.2rem,3vw,1.5rem)] flex items-center mx-auto btn-fade-in"
+				style="animation-delay: 2.3s;"> <!-- 延迟时间根据标题动画总时长设置 -->
+				<i class="fa fa-heartbeat mr-3"></i> 开始探索
+			</button>
             </div>
         </div>
 
@@ -530,7 +590,7 @@
 	<!-- 背景图片层 -->
     <div class="absolute inset-0 z-0 flex items-center justify-center">
         <img src="comics/girl1.png" 
-             alt="背景图片描述" 
+             alt="女孩遍体鳞伤" 
              class="max-w-[85%] max-h-[85%] object-contain opacity-30">
     </div>
         <div class="content-container">
@@ -700,18 +760,9 @@ groupContainers.forEach(container => {
 });
 
 // 页面加载时初始化
+// 替换原初始化代码
 window.addEventListener('load', function() {
-    // 确保漫画区域在视口中时才初始化
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                initComics();
-                observer.disconnect();
-            }
-        });
-    });
-    
-    observer.observe(document.getElementById('comic-section'));
+    initComics(); // 直接初始化，无需等待进入视口
 });
 
 </script>
