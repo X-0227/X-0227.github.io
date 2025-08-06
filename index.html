@@ -1094,45 +1094,42 @@ window.addEventListener('load', function() {
     </div>
 </section>
 
-<!-- 页脚 -->
 <footer class="bg-dark text-white py-10 relative">
-    <div class="content-container">
-        <!-- 顶部logo和学校信息 -->
-        <div class="flex flex-col md:flex-row justify-between items-center mb-8 pb-6 border-b border-gray-700">
-            
-            
-            <!-- 项目标题 -->
+    <div class="content-container px-0 md:px-4">
+        <!-- 顶部信息区 -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-4 pb-4 border-b border-gray-700 mx-4">
             <div class="text-center md:text-left">
                 <h2 class="text-2xl font-bold mb-1">不想看你受一样的伤害</h2>
                 <p class="text-gray-300">数说权势性侵下的共同救赎</p>
             </div>
         </div>
 
-        <!-- 中间信息区 -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <!-- 数据来源（折叠式） -->
-            <div class="col-span-1 md:col-span-3 lg:col-span-2">
+        <!-- 中间信息区：数据来源 + 团队信息（整体右移） -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-8 mx-4">
+            <!-- 数据来源：占11列（释放空间给团队信息右移） -->
+            <div class="lg:col-span-11">
+                <!-- 数据来源内容保持不变 -->
                 <div class="data-sources">
                     <button id="source-toggle" class="flex justify-between items-center w-full text-left mb-4">
                         <h4 class="text-lg font-semibold text-primary">数据来源</h4>
                         <i class="fa fa-chevron-down text-primary transition-transform duration-300" id="source-icon"></i>
                     </button>
-                    <div id="sources-content" class="hidden grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-300">
-                        <!-- 第一类：官方网站 -->
+                    <div id="sources-content" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm text-gray-300">
+                        <!-- 官方网站 -->
                         <div>
                             <p class="font-medium text-white mb-2">官方网站</p>
                             <ul class="space-y-1">
                                 <li>· 中国裁判文书网（2014-2024年猥亵、性侵、强奸相关判决书）</li>
                                 <li>· 中华人民共和国最高人民法院官网</li>
                                 <li>· 国家统计局</li>
-                                <li>· 中国政府网中华人民共和国刑法修正案（九）（主席令﻿第三十号）</li>
+                                <li>· 中国政府网中华人民共和国刑法修正案（九）</li>
                                 <li>· 中华人民共和国最高人民检察院官网</li>
-								<li>· 广东政法网</li>
-								<li>· 中国人大网</li>
-								<li>· 宿迁政府法制网</li>
+                                <li>· 广东政法网</li>
+                                <li>· 中国人大网</li>
+                                <li>· 宿迁政府法制网</li>
                             </ul>
                         </div>
-                        <!-- 第二类：媒体报道 -->
+                        <!-- 媒体报道、研究报告、社交平台内容保持不变 -->
                         <div>
                             <p class="font-medium text-white mb-2">媒体报道</p>
                             <ul class="space-y-1">
@@ -1143,7 +1140,6 @@ window.addEventListener('load', function() {
                                 <li>· 澎湃新闻《河南赵志勇强奸案：全县加强学生安全教育和性教育》</li>
                             </ul>
                         </div>
-						<!-- 第三类：研究报告 -->
                         <div>
                             <p class="font-medium text-white mb-2">研究报告</p>
                             <ul class="space-y-1">
@@ -1152,8 +1148,6 @@ window.addEventListener('load', function() {
                                 <li>· 《农村留守女童遭受性侵状况的调研报告》吴江湖</li>
                             </ul>
                         </div>
-
-                        <!-- 第四类：社交平台 -->
                         <div>
                             <p class="font-medium text-white mb-2">社交平台</p>
                             <ul class="space-y-1">
@@ -1166,8 +1160,8 @@ window.addEventListener('load', function() {
                 </div>
             </div>
 
-            <!-- 右侧团队信息 -->
-            <div>
+            <!-- 团队信息：占4列 -->
+            <div class="lg:col-span-4 lg:col-start-13"> 
                 <!-- 团队成员 -->
                 <div class="mb-6">
                     <h4 class="text-lg font-semibold mb-3 text-primary">团队成员</h4>
@@ -1190,6 +1184,9 @@ window.addEventListener('load', function() {
         </div>
     </div>
 </footer>
+
+
+
 
 <!-- 折叠功能脚本 -->
 <script>
