@@ -1094,7 +1094,8 @@ window.addEventListener('load', function() {
     </div>
 </section>
 
-<footer class="bg-dark text-white py-10 relative">
+<!-- 页脚 -->
+<footer class="bg-dark text-white py-4 pb-1 relative">
     <div class="content-container px-0 md:px-4">
         <!-- 顶部信息区 -->
         <div class="flex flex-col md:flex-row justify-between items-center mb-4 pb-4 border-b border-gray-700 mx-4">
@@ -1104,18 +1105,19 @@ window.addEventListener('load', function() {
             </div>
         </div>
 
-        <!-- 中间信息区：数据来源 + 团队信息（整体右移） -->
+        <!-- 中间信息区：数据来源 + 团队信息 -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-8 mx-4">
-            <!-- 数据来源：占11列（释放空间给团队信息右移） -->
+            <!-- 数据来源：占11列 -->
             <div class="lg:col-span-11">
-                <!-- 数据来源内容保持不变 -->
                 <div class="data-sources">
                     <button id="source-toggle" class="flex justify-between items-center w-full text-left mb-4">
                         <h4 class="text-lg font-semibold text-primary">数据来源</h4>
                         <i class="fa fa-chevron-down text-primary transition-transform duration-300" id="source-icon"></i>
                     </button>
-                    <div id="sources-content" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm text-gray-300">
-                        <!-- 官方网站 -->
+                    <!-- 关键修改：使用固定列宽比例，第一列最宽，第二列最窄 -->
+                    <div id="sources-content" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm text-gray-300" 
+                         style="grid-template-columns: 36% 30% 18% 16%;">
+                        <!-- 官方网站（最宽列） -->
                         <div>
                             <p class="font-medium text-white mb-2">官方网站</p>
                             <ul class="space-y-1">
@@ -1129,7 +1131,7 @@ window.addEventListener('load', function() {
                                 <li>· 宿迁政府法制网</li>
                             </ul>
                         </div>
-                        <!-- 媒体报道、研究报告、社交平台内容保持不变 -->
+                        <!-- 媒体报道（最窄列） -->
                         <div>
                             <p class="font-medium text-white mb-2">媒体报道</p>
                             <ul class="space-y-1">
@@ -1140,6 +1142,7 @@ window.addEventListener('load', function() {
                                 <li>· 澎湃新闻《河南赵志勇强奸案：全县加强学生安全教育和性教育》</li>
                             </ul>
                         </div>
+                        <!-- 研究报告 -->
                         <div>
                             <p class="font-medium text-white mb-2">研究报告</p>
                             <ul class="space-y-1">
@@ -1148,11 +1151,12 @@ window.addEventListener('load', function() {
                                 <li>· 《农村留守女童遭受性侵状况的调研报告》吴江湖</li>
                             </ul>
                         </div>
+                        <!-- 社交平台 -->
                         <div>
                             <p class="font-medium text-white mb-2">社交平台</p>
                             <ul class="space-y-1">
                                 <li>· 微博号“新黄河”关于天津崔丽丽遭职场性侵维权案的评论</li>
-                                <li>· 微博号“央视新闻”关于广西唐毓文案的有效评</li>
+                                <li>· 微博号“央视新闻”关于广西唐毓文案的评论</li>
                                 <li>· 微博关键词“汤兰兰”2024年-2025年相关微博正文</li>
                             </ul>
                         </div>
@@ -1184,6 +1188,7 @@ window.addEventListener('load', function() {
         </div>
     </div>
 </footer>
+
 
 
 
