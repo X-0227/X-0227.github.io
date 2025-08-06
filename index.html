@@ -886,9 +886,20 @@ function initComics() {
 
 // 添加漫画图片（包含加载提示）
 function addComicImage(src, container) {
+    const totalIndex = currentGroup * 6 + currentIndexInGroup; // 0 ~ 17
     const imgContainer = document.createElement('div');
     imgContainer.className = 'comic-item overflow-hidden rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:scale-[2.00] relative z-10';
     
+	// 设置 transform-origin 根据图片在一行中的位置（左中右）
+    const positionInRow = totalIndex % 3;
+    if (positionInRow === 0) {
+        imgContainer.style.transformOrigin = 'left';
+    } else if (positionInRow === 1) {
+        imgContainer.style.transformOrigin = 'center';
+    } else {
+        imgContainer.style.transformOrigin = 'right';
+    }
+
     // 创建加载提示元素
     const loadingIndicator = document.createElement('div');
     loadingIndicator.className = 'loading-indicator absolute inset-0 flex items-center justify-center bg-gray-100 text-pink-500';
