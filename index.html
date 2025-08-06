@@ -536,6 +536,65 @@
         text-indent: 2em; /* 首行缩进2个字符宽度 */
     }
 
+	.image-with-tooltip {
+    position: relative;
+    display: inline-block;
+}
+		/* 趣味提示框样式 */
+		.image-wrapper {
+			position: relative;
+			display: inline-block;
+			cursor: zoom-in; /* 鼠标变成放大镜图标，提前暗示交互 */
+		}
+
+		.fun-tooltip {
+			position: absolute;
+			bottom: calc(100% + 10px); /* 图片上方，留一点间距 */
+			left: 50%;
+			transform: translateX(50%) scale(1); 
+			background: linear-gradient(135deg, #ffc6e0 0%, #fca3b7 100%);
+			color: white;
+			padding: 8px 15px;
+			border-radius: 30px; /* 圆形边角更活泼 */
+			font-size: 14px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+			white-space: nowrap; /* 防止文字换行 */
+			opacity: 1; /* 初始不隐藏 */
+			pointer-events: none;
+			transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* 弹性动画曲线 */
+			z-index: 10;
+		}
+
+		/* 小三角装饰，增加趣味性 */
+		.fun-tooltip::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			border-width: 6px;
+			border-style: solid;
+			border-color: #ffc6e0 transparent transparent transparent;
+		}
+
+		/* 图标样式 */
+		.fun-tooltip i {
+			margin-right: 6px;
+			animation: bounce 1.5s infinite; /* 图标跳动动画 */
+		}
+
+		/* 鼠标悬浮时显示提示框 */
+		.image-wrapper:hover .fun-tooltip {
+			opacity: 0;
+			transform: translateX(50%) scale(1); /* 放大到正常尺寸 */
+		}
+
+		/* 跳动动画 */
+		@keyframes bounce {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-3px); }
+		}
+
     </style>
 </head>
 
@@ -867,8 +926,11 @@ window.addEventListener('load', function() {
                             三类权势性侵本质是权力不对等关系下的暴力与掠夺。因此，国家需要完善法律法规，如在刑法中将教师等具有一定监护属性的职责身份列为法定加重情节，同时修改性同意年龄加强对未成年受害者的保护。还可以建立全国教育从业者犯罪数据库，施行性犯罪者终身禁入教育行业 —— 这些制度修补，都是在为权力套上枷锁，让每一次伤害后的救赎不再遥不可及。
                         </p>
                     </div>
-					<div class="md:w-1/2">
+					<div class="image-wrapper md:w-1/2">
                         <img src="charts/2014-2024年三类权势性侵案件的数量比例关系以及恶劣程度.png" alt="三类权势性侵案件数据图" class="w-full h-auto rounded-lg shadow-md transform transition-all duration-300 origin-top-right hover:shadow-xl hover:scale-[2.00] relative z-10">
+						<div class="fun-tooltip">
+						<i class="fa fa-search-plus"></i> 点我放大看看~
+						</div>
 						<div class="mt-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
                     <p class="text-sm text-gray-700 leading-relaxed">
                         数据来源：
@@ -912,8 +974,11 @@ window.addEventListener('load', function() {
                         因此，我国应统筹分配司法资源，让那些因司法光照不足的“隐秘角落”亮起来；提升民众的维权意识，让“沉默的声音”喊出来；拓宽维权渠道，稳稳接住人民的声音 —— 唯有如此，才能让不同地域的受害者获得平等的救赎机会，让正义不再受地域的阻隔。
                     </p>
                 </div>
-				<div class="md:w-1/2">
+				<div class="image-wrapper md:w-1/2">
                     <img src="charts/2014-2024各省份经济与案例数量关联性.gif" alt="2014-2024各省份经济与案例数量关联性" class="w-full h-auto rounded-lg shadow-md transform transition-all duration-300 origin-top-right hover:shadow-xl hover:scale-[1.80] relative z-10">
+					<div class="fun-tooltip">
+						<i class="fa fa-search-plus"></i> 点我放大看看~
+					</div>
 					<div class="mt-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
                     <p class="text-sm text-gray-700 leading-relaxed">
                         数据来源：
@@ -949,8 +1014,11 @@ window.addEventListener('load', function() {
                         这背后，首先是法律认定的细化驱动：2015 年《刑法修正案（九）》细化了猥亵罪认定，明确 “公共场所猥亵” 等情形入刑；2014-2020 年强制报告制度推行，要求校园、托管机构等密切接触未成年人的行业，发现猥亵必须报案，让对“未成年人”的“隐性侵犯”更为难以遁形。
                     </p>
                     <p class="mb-6 first-indent">
-                        其次得益于跨部门协同发力，以宁波为例，2019 年 12 月，宁波市检察院联合公安、教育等 12 部门出台《密切接触未成年人行业入职查询办法》，建立覆盖全国的性侵违法犯罪记录数据库，比如余姚市检察院认为王某的行为可能涉嫌刑事犯罪，公安机关仅作行政拘留处罚不当，故将线索移交宁波市某区检察院进一步开展立案监督工作。在国家和社会的助力下，越来越多的案件被看见。比如广东 2020 年推行 “一站式” 取证机制，集询问、取证、心理疏导于一体，降低了受害者的报案顾虑。社会普法工程的助力，2016-2019 年 “法治进校园” 活动覆盖全国，媒体对性侵案件的持续曝光让公众对强奸犯罪的认知深化，更多隐案得以“浮出水面”。
+                        其次得益于跨部门协同发力，以宁波为例，2019 年 12 月，宁波市检察院联合公安、教育等 12 部门出台《密切接触未成年人行业入职查询办法》，建立覆盖全国的性侵违法犯罪记录数据库，比如余姚市检察院认为王某的行为可能涉嫌刑事犯罪，公安机关仅作行政拘留处罚不当，故将线索移交宁波市某区检察院进一步开展立案监督工作。在国家和社会的助力下，越来越多的案件被看见。比如广东 2020 年推行 “一站式” 取证机制，集询问、取证、心理疏导于一体，降低了受害者的报案顾虑 —— 这些制度创新，既是对伤害的拦截，也是对受害者的救赎，让她们不必在维权路上独自承受二次伤害。
                     </p>
+					<p class="mb-6 first-indent">
+						性侵案件数量的变动还离不开教育普法的作用，从源头阻断犯罪机会。河南尉氏县在赵志勇案后全县加强学生性教育和安全管理，严格出入登记、宿舍封闭管理，并推广《守护青苹果》防性侵动漫教育。2018年教育部公安厅发布通知，要求各地教育行政部门和学校强化教职员工管理，持续强化学校安全督导检查，预防性侵。联合公安部门建立性侵害违法犯罪信息库和入职查询制度，从源头筛除高风险人员。2016-2019 年 “法治进校园” 活动覆盖全国，媒体对性侵案件的持续曝光让公众对强奸犯罪的认知深化，更多隐案 “浮出水面”。
+					</p>
                     <p class="mb-6 first-indent">
                         2019年后，三类案件文书量均有所下降（强奸案文书降至 449 份，猥亵案文书降至 226 份，性侵案文书降至 31 份）。这既体现了治理成效显现的积极面，也隐含着经济薄弱地区案件 “应统未统” 等复杂问题。比如因警力不足、取证周期长导致的未录入统计问题；或是非刑处理分流，2021 年习近平总书记提出 “完善预防性法律制度”，部分地区尝试将治安调解与训诫结合，探索轻微违法案件的非监禁化处理路径。例如，江苏、浙江等地公安机关在 “枫桥经验” 框架下，针对情节轻微、未造成实质性伤害的猥亵行为，尝试通过调解修复社会关系，同时以训诫强化教育威慑来解决纠纷；又或是因传统观念束缚，受害者觉得 “羞耻” 且维权渠道狭窄而未报案，案件的 “沉默” 掩盖了真实伤害 —— 这些未被完全照亮的角落，提醒我们救赎之路仍需延伸。
                     </p>
@@ -958,8 +1026,11 @@ window.addEventListener('load', function() {
 						若能推进司法资源均衡（比如为薄弱地区建设 “移动司法站”）、深化观念普法（通过乡村广播 + 短视频宣传），短期内案件文书量或许会 “企稳”（更多隐案被挖掘），长期随着治理成效累加将 “缓降”，反映出真实的犯罪遏制态势。若资源差距持续存在、观念未能破冰，数据可能会 “低位震荡”，掩盖真实的犯罪状况，导致部分伤害持续 “沉默” —— 而我们的目标，正是让每一份沉默都能被打破，让每一次伤害都能获得救赎的可能。
 					</p>
                 </div>
-				<div class="md:w-1/2">
+				<div class="image-wrapper md:w-1/2" style="position: relative;">
                     <img src="charts/2014-2024 年性侵类案件文书数量趋势强奸性侵猥亵对比.png" alt="性侵类案件文书数量趋势图" class="w-full h-auto rounded-lg shadow-md transform transition-all duration-300 origin-top-right hover:shadow-xl hover:scale-[2.00] relative z-10">
+					<div class="fun-tooltip">
+						<i class="fa fa-search-plus"></i> 点我放大看看~
+					</div>
 					<div class="mt-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
                     <p class="text-sm text-gray-700 leading-relaxed">
                         数据来源：
@@ -1024,28 +1095,119 @@ window.addEventListener('load', function() {
     </div>
 </section>
 
-    <!-- 页脚 -->
-    <footer class="bg-dark text-white py-8">
-        <div class="content-container">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold mb-2">不想看你受一样的伤害——数说权势性侵下的共同救赎</h3>
-                    <p class="text-gray-300">关注性侵问题，共建和谐社会</p>
+<!-- 页脚 -->
+<footer class="bg-dark text-white py-10 relative">
+    <div class="content-container">
+        <!-- 顶部logo和学校信息 -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-8 pb-6 border-b border-gray-700">
+            
+            
+            <!-- 项目标题 -->
+            <div class="text-center md:text-left">
+                <h2 class="text-2xl font-bold mb-1">不想看你受一样的伤害</h2>
+                <p class="text-gray-300">数说权势性侵下的共同救赎</p>
+            </div>
+        </div>
+
+        <!-- 中间信息区 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <!-- 数据来源（折叠式） -->
+            <div class="col-span-1 md:col-span-3 lg:col-span-2">
+                <div class="data-sources">
+                    <button id="source-toggle" class="flex justify-between items-center w-full text-left mb-4">
+                        <h4 class="text-lg font-semibold text-primary">数据来源</h4>
+                        <i class="fa fa-chevron-down text-primary transition-transform duration-300" id="source-icon"></i>
+                    </button>
+                    <div id="sources-content" class="hidden grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-300">
+                        <!-- 第一类：官方网站 -->
+                        <div>
+                            <p class="font-medium text-white mb-2">官方网站</p>
+                            <ul class="space-y-1">
+                                <li>· 中国裁判文书网（2014-2024年猥亵、性侵、强奸相关判决书）</li>
+                                <li>· 中华人民共和国最高人民法院官网</li>
+                                <li>· 国家统计局</li>
+                                <li>· 中国政府网中华人民共和国刑法修正案（九）（主席令﻿第三十号）</li>
+                                <li>· 中华人民共和国最高人民检察院官网</li>
+								<li>· 广东政法网</li>
+								<li>· 中国人大网</li>
+								<li>· 宿迁政府法制网</li>
+                            </ul>
+                        </div>
+                        <!-- 第二类：媒体报道 -->
+                        <div>
+                            <p class="font-medium text-white mb-2">媒体报道</p>
+                            <ul class="space-y-1">
+                                <li>· 广西百色教师性侵案（2025年公开报道）</li>
+                                <li>· 天津职场性侵案（2023年司法公开文书）</li>
+                                <li>· 黑龙江汤兰兰案（2008-2021年跟踪报道）</li>
+                                <li>· 今日头条人民法院报2024年12月22日《高原守望者》</li>
+                                <li>· 澎湃新闻《河南赵志勇强奸案：全县加强学生安全教育和性教育》</li>
+                            </ul>
+                        </div>
+						<!-- 第三类：研究报告 -->
+                        <div>
+                            <p class="font-medium text-white mb-2">研究报告</p>
+                            <ul class="space-y-1">
+                                <li>· 女童保护基金《2023年性侵儿童案例统计分析报告》</li>
+                                <li>· 中国发展简报《【妇源汇专栏】我国儿童保护机制下的强制报告制度的规定与实践》</li>
+                                <li>· 《农村留守女童遭受性侵状况的调研报告》吴江湖</li>
+                            </ul>
+                        </div>
+
+                        <!-- 第四类：社交平台 -->
+                        <div>
+                            <p class="font-medium text-white mb-2">社交平台</p>
+                            <ul class="space-y-1">
+                                <li>· 微博号“新黄河”关于天津崔丽丽遭职场性侵维权案的评论</li>
+                                <li>· 微博号“央视新闻”关于广西唐毓文案的有效评</li>
+                                <li>· 微博关键词“汤兰兰”2024年-2025年相关微博正文</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-white hover:text-primary transition-colors">
-                        <i class="fa fa-weibo text-xl"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-primary transition-colors">
-                        <i class="fa fa-wechat text-xl"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-primary transition-colors">
-                        <i class="fa fa-envelope text-xl"></i>
-                    </a>
+            </div>
+
+            <!-- 右侧团队信息 -->
+            <div>
+                <!-- 团队成员 -->
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold mb-3 text-primary">团队成员</h4>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>· 肖天翔</li>
+                        <li>· 肖燕</li>
+                        <li>· 魏小琴</li>
+                        <li>· 洪梓凌</li>
+                    </ul>
+                </div>
+                
+                <!-- 指导老师 -->
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold mb-3 text-primary">指导老师</h4>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>· 李飞翔</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
+
+<!-- 折叠功能脚本 -->
+<script>
+    // 数据来源折叠/展开功能
+    const sourceToggle = document.getElementById('source-toggle');
+    const sourcesContent = document.getElementById('sources-content');
+    const sourceIcon = document.getElementById('source-icon');
+    
+    sourceToggle.addEventListener('click', () => {
+        sourcesContent.classList.toggle('hidden');
+        sourceIcon.classList.toggle('rotate-180'); // 箭头旋转效果
+    });
+    
+    // 默认展开（可选：改为默认折叠则删除此行）
+    sourcesContent.classList.remove('hidden');
+</script>
+
 
     <script>
         // 导航栏滚动效果
