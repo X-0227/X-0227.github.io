@@ -594,7 +594,8 @@
 			50% { transform: translateY(-3px); }
 		}
 
-
+<!-- 在原<style>标签内补充以下响应式样式 -->
+<style>
     /* 移动端基础适配 */
     @media (max-width: 768px) {
         /* 导航栏调整 */
@@ -701,6 +702,7 @@
             font-size: 0.8rem !important; /* 缩小提示文字 */
         }
     }
+
     </style>
 </head>
 
@@ -1160,7 +1162,7 @@ window.addEventListener('load', function() {
     <section id="page7" class="section bg-light">
     
     <!-- 右下角背景图 -->
-    <div class="absolute bottom-8 right-8">
+    <div class="absolute bottom-1 right-1">
         <img src="comics/girl2.png" alt="女孩展翅高飞" class="w-[480px] h-auto opacity-80 hover:opacity-80 transition-opacity duration-300">
     </div>
         <div class="content-container relative z-10">
