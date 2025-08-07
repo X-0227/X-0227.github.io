@@ -998,7 +998,21 @@ window.addEventListener('load', function() {
                 </div>
 				<div class="md:w-1/2 relative h-[500px]">
                     <div id="emoji-layer" class="absolute inset-0 pointer-events-none overflow-visible z-10"></div>
-					<img src="charts/wordcloud-1.png" alt="词云图">
+					<img src="charts/wordcloud.png" alt="词云图">
+					<div class="mt-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        数据来源：
+					</p>
+					<p class="text-sm text-gray-700 leading-relaxed">
+						1.爬取微博号“新黄河”关于天津崔丽丽遭职场性侵维权案的有效评论173条；
+					</p>
+					<p class="text-sm text-gray-700 leading-relaxed">
+						2.爬取微博号“央视新闻”关于广西唐毓文案的有效评论301条；
+					</p>
+					<p class="text-sm text-gray-700 leading-relaxed">
+						3.爬取微博“汤兰兰”2024年-2025年相关微博正文231条。
+                    </p>
+					</div>
                 </div>
             </div>
         </div>
@@ -1015,7 +1029,7 @@ window.addEventListener('load', function() {
                 <div>
                     <h3 class="text-xl font-bold text-dark mb-4 text-center">案件比例</h3>
                     <div id="labels" class="flex flex-wrap justify-center gap-4 mb-8">
-                        <div class="label teacher" draggable="true" data-type="teacher">教师</div>
+                        <div class="label teacher" draggable="true" data-type="teacher">师生</div>
                         <div class="label relative" draggable="true" data-type="relative">亲属</div>
                         <div class="label work" draggable="true" data-type="work">职场</div>
                     </div>
@@ -1103,7 +1117,7 @@ window.addEventListener('load', function() {
                         数据来源：
 					</p>
 					<p class="text-sm text-gray-700 leading-relaxed">
-						1.中国裁判文书网 关键词：性侵、猥亵、强奸 年份：2014-2024
+						1.中国裁判文书网2014-2024年部分性侵、猥亵、强奸判决书
 					</p>
 					<p class="text-sm text-gray-700 leading-relaxed">
 						2.国家统计局 年份：2014-2024
@@ -1127,7 +1141,7 @@ window.addEventListener('load', function() {
             <div class="flex flex-col md:flex-row gap-8">
                 <div class="md:w-1/2">
                     <p class="mb-6 first-indent">
-                        整体来看，2014-2019 年前后，三类案件文书量多呈上升或波动上升趋势，这反映出社会对性侵类案件的关注度提升、司法机关主动治理发力，更多案件进入了统计流程。2014-2019年是司法 “显效” 期：强奸案件的文书数量从 2014 年的 3061 份逐步攀升，2019年前后达到 4276 份的峰值；猥亵案件的文书数量从 715 份增至 2045 份；性侵案件的文书数量则从 45 份增至 237 份，这是 “微小伤害被正视” 的过程。
+                        整体来看，2014-2019 年前后，性侵、猥亵、强奸案件文书量多呈上升或波动上升趋势，这反映出社会对此类案件的关注度提升、司法机关主动治理发力，更多案件进入了统计流程。2014-2019年是司法 “显效” 期：强奸案件的文书数量从 2014 年的 3061 份逐步攀升，2019年前后达到 4276 份的峰值；猥亵案件的文书数量从 715 份增至 2045 份；性侵案件的文书数量则从 45 份增至 237 份，这是 “微小伤害被正视” 的过程。
                     </p>
                     <p class="mb-6 first-indent">
                         这背后，首先是法律认定的细化驱动：2015 年《刑法修正案（九）》细化了猥亵罪认定，明确 “公共场所猥亵” 等情形入刑；2014-2020 年强制报告制度推行，要求校园、托管机构等密切接触未成年人的行业，发现猥亵必须报案，让对“未成年人”的“隐性侵犯”更为难以遁形。
@@ -1146,7 +1160,7 @@ window.addEventListener('load', function() {
 					</p>
                 </div>
 				<div class="image-wrapper md:w-1/2" style="position: relative;">
-                    <img src="charts/2014-2024 年性侵类案件文书数量趋势强奸性侵猥亵对比.png" alt="2014-2024 年性侵类案件文书数量趋势强奸性侵猥亵对比" class="w-full h-auto rounded-lg shadow-md transform transition-all duration-300 origin-top-right hover:shadow-xl hover:scale-[2.00] relative z-10">
+                    <img src="charts/2014-2024 年强奸性侵猥亵案件文书数量对比.png" alt="2014-2024 年强奸性侵猥亵案件文书数量对比" class="w-full h-auto rounded-lg shadow-md transform transition-all duration-300 origin-top-right hover:shadow-xl hover:scale-[2.00] relative z-10">
 					<div class="fun-tooltip">
 						<i class="fa fa-search-plus"></i> 点我放大看看~
 					</div>
@@ -1155,7 +1169,7 @@ window.addEventListener('load', function() {
                         数据来源：
 					</p>
 					<p class="text-sm text-gray-700 leading-relaxed">
-						根据中国裁判文书网2014-2024年部分性侵、猥亵、强奸判决书，整理区分出权势类别、文书数量、年份。
+						根据中国裁判文书网2014-2024年关键词为性侵、猥亵、强奸的全部判决书数量，整理区分出概念类别、文书数量、年份。
 					</p>
 					</div>
 					<div class="mt-4">
@@ -1571,7 +1585,7 @@ window.addEventListener('load', function() {
 
                 if (currentCounts.teacher > 0) {
                     const p = (currentCounts.teacher / total) * 100;
-                    textParts.push(`教师 ${currentCounts.teacher}（${p.toFixed(1)}%）`);
+                    textParts.push(`师生 ${currentCounts.teacher}（${p.toFixed(1)}%）`);
                 }
                 if (currentCounts.relative > 0) {
                     const p = (currentCounts.relative / total) * 100;
