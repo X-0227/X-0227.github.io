@@ -594,8 +594,18 @@
 			50% { transform: translateY(-3px); }
 		}
 
-<!-- 在原<style>标签内补充以下响应式样式 -->
-<style>
+.comic-item {
+    /* 确保基础样式中有 position: relative */
+    position: relative;
+    z-index: 10; /* 默认层级 */
+    transition: all 0.3s ease; /* 确保过渡效果包含 z-index */
+}
+
+.comic-item:hover {
+    z-index: 100; /* 悬浮时提高层级，避免被其他元素遮挡 */
+    transform: scale(2.00); /* 已有的放大效果 */
+}
+
     /* 移动端基础适配 */
     @media (max-width: 768px) {
         /* 导航栏调整 */
